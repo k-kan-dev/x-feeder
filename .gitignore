@@ -1,0 +1,26 @@
+# General
+*~
+\#*#
+*.o
+\.nfs0000*
+\..*
+
+# tex
+*.aux
+*.dvi
+*.log
+*.synctex.gz
+*.pdf
+*.fdb_latexmk
+*.fls
+
+# for Python
+__pycache__/
+**/__pycache__/**
+*.py[cod]
+*$py.class
+venv/*
+.python-version
+poetry.lock
+install-pyenv-win.ps1
+
