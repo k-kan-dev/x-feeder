@@ -27,3 +27,4 @@ install-pyenv-win.ps1
 # VSCODE
 .vscode/
 .git/
+.env

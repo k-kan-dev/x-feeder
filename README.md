@@ -17,3 +17,12 @@
     PS pip install poetry
     PS poetry shell
     ```
+
+## supabase
+1. see `API settings > Data API` @ supabase
+1. write down env-variables into `config/.env`
+```PowerShell
+PS cat config/.env
+SUPABASE_URL = https://xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+SUPABASE_KEY = XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+```
