@@ -24,5 +24,6 @@
 ```PowerShell
 PS cat config/.env
 SUPABASE_URL = https://xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-SUPABASE_KEY = XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+SUPABASE_KEY = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+SUPABASE_SERVICE_KEY = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
