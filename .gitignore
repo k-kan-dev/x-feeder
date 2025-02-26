@@ -28,3 +28,4 @@ install-pyenv-win.ps1
 .vscode/
 .git/
 .env
+.vercel
