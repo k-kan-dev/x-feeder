@@ -10,12 +10,11 @@
   - 2.1.1
 - ex. (PowerShell)
     ```PowerShell
-    PS pyenv install 3.12.9
-    PS pyenv local 3.12.9
+    PS pyenv install 3.11.9
+    PS pyenv local 3.11.9
     PS python --version
-    Python 3.12.9
+    Python 3.11.9
     PS pip install poetry
-    PS poetry shell
     ```
 
 ## supabase
