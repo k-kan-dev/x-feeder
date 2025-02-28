@@ -22,7 +22,7 @@
 ## local-env
 
 1. see `API settings > Data API` @ supabase
-1. create `./x-feeder/config/.env`
+1. create `.\x-feeder\config\.env`
     ```txt
     SUPABASE_URL = https://xxxxxxx.supabase.co
     SUPABASE_KEY = exxxxxxxxx
