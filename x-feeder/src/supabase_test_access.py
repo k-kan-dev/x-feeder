@@ -4,10 +4,10 @@ from supabase import create_client, Client
 from dotenv import load_dotenv, find_dotenv
 
 parser = configparser.ConfigParser()
-parser.read("./config/cfg.ini")
+parser.read("./x-feeder/config/cfg.ini")
 
 # `.env` ファイルを明示的に探してロード
-env_path = find_dotenv("./config/.env")
+env_path = find_dotenv("./x-feeder/config/.env")
 if env_path == "":
     raise FileNotFoundError(".env ファイルが見つかりません。ルートディレクトリに作成してください。")
 load_dotenv(env_path)

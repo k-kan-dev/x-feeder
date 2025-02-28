@@ -6,9 +6,9 @@ from dotenv import load_dotenv
 
 
 parser = configparser.ConfigParser()
-parser.read("./config/cfg.ini")
+parser.read("./x-feeder/config/cfg.ini")
 # .envの読み込み
-load_dotenv("./config/.env")
+load_dotenv("./x-feeder/config/.env")
 
 SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_SERVICE_KEY = os.getenv("SUPABASE_SERVICE_KEY")
