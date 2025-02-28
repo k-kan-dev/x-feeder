@@ -15,35 +15,46 @@
     PS python --version
     Python 3.11.9
     PS pip install poetry
+    PS poetry install
     ```
-# test
+# deployment
 
-1. create `./config/.env`
+## local-env
+
+1. see `API settings > Data API` @ supabase
+1. create `./x-feeder/config/.env`
     ```txt
     SUPABASE_URL = https://xxxxxxx.supabase.co
     SUPABASE_KEY = exxxxxxxxx
     SUPABASE_SERVICE_KEY = xxxxxxxxxxxx
     ```
-1.  command ex
+
+1.  
     ```PowerShell
-    PS poetry run uvicorn src.main:app --reload
-
+    PS poetry run uvicorn x-feeder.src.main:app --reload
     ```
-1. vercel --local-config ./config/vercel.json
+## test-env
 
-# deploy 
-
-1. 
+1. `vercel --local-config .\x-feeder\config\vercel.json`
+    - ex.
     ```PowerShell
-    PS vercel --local-config ./config/vercel.json --prod
+    PS vercel --local-config .\x-feeder\config\vercel.json
+    Vercel CLI 41.2.2
+    🔍  Inspect: https://vercel.com/PROJECT_NAME/x-feeder/6Vz216U4N1ySvH4Z9kyMUvZamR2f [2s]
+    ✅  Preview: https://x-feeder-ks9r0jxyx-PROJECT-NAME.vercel.app [2s]
+    📝  To deploy to production (x-feeder.vercel.app), run `vercel --prod`
+    ❗️  Due to `builds` existing in your configuration file, the Build and Development Settings defined in your Project Settings will not apply. Learn More: https://vercel.link/unused-build-settings
     ```
 
-## supabase
-1. see `API settings > Data API` @ supabase
-1. write down env-variables into `config/.env`
-```PowerShell
-PS cat config/.env
-SUPABASE_URL = https://xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-SUPABASE_KEY = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-SUPABASE_SERVICE_KEY = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-```
+## prod-env 
+
+1. `vercel --local-config .\x-feeder\config\vercel.json --prod`
+    - ex.
+    ```PowerShell
+    PS vercel --local-config .\x-feeder\config\vercel.json --prod
+    Vercel CLI 41.2.2
+    🔍  Inspect: https://vercel.com/PROJECT-NAME/x-feeder/Gjr2bu1mnjXhtfcYsHGYYT4M4wKd [956ms]
+    ✅  Production: https://x-feeder-q3oizcgam-PROJECT-NAME.vercel.app [956ms]
+    ❗️  Due to `builds` existing in your configuration file, the Build and Development Settings defined in your Project Settings will not apply. Learn More: https://vercel.link/unused-build-settings
+    ```
+
