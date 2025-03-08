@@ -1,6 +1,7 @@
 import os
 import configparser
 from fastapi import FastAPI
+from fastapi.responses import FileResponse
 from supabase import create_client
 from dotenv import load_dotenv
 
@@ -19,11 +20,21 @@ SUPABASE_ANON_KEY = os.getenv("SUPABASE_ANON_KEY")  # クライアント用キ�
 supabase = create_client(SUPABASE_URL, SUPABASE_SERVICE_KEY)
 
 app = FastAPI()
+FAVICON_PATH = os.path.join(
+    os.path.dirname(__file__),
+    "static",
+    "favicon.ico"
+)
+
 x = X()
 
 @app.get("/")
 def home():
     return {"message": "Hello, Vercel + FastAPI!"}
+
+@app.get("/favicon.ico", include_in_schema=False)
+async def favicon():
+    return FileResponse(FAVICON_PATH)
 
 @app.get("/get_tweets")
 def get_users():
