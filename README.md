@@ -17,9 +17,9 @@
     PS pip install poetry
     PS poetry install
     ```
-# deployment
+# how to test & deploy
 
-## local-env
+## @local-env
 
 1. see `API settings > Data API` @ supabase
 1. create `.\x-feeder\config\.env`
@@ -29,11 +29,18 @@
     SUPABASE_SERVICE_KEY = xxxxxxxxxxxx
     ```
 
-1.  
+1. `poetry run uvicorn x-feeder.src.main:app --reload`
+    - ex.
     ```PowerShell
     PS poetry run uvicorn x-feeder.src.main:app --reload
+    INFO:     Will watch for changes in these directories: ['C:\\Users\\hakuu\\Documents\\101-programing\\115-X-Feeder']
+    INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+    INFO:     Started reloader process [51220] using StatReload
+    INFO:     Started server process [49608]
+    INFO:     Waiting for application startup.
+    INFO:     Application startup complete.
     ```
-## test-env
+## @test-env
 
 1. `vercel --local-config .\x-feeder\config\vercel.json`
     - ex.
@@ -46,7 +53,7 @@
     ❗️  Due to `builds` existing in your configuration file, the Build and Development Settings defined in your Project Settings will not apply. Learn More: https://vercel.link/unused-build-settings
     ```
 
-## prod-env 
+## @prod-env
 
 1. `vercel --local-config .\x-feeder\config\vercel.json --prod`
     - ex.

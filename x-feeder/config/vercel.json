@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
       {
-        "src": "./x-feeder/src/main.py",
+        "src": "x-feeder/src/main.py",
         "use": "@vercel/python",
         "config": { "runtime": "python3.11" }
       }
